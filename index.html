@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Досье — Попов Тимофей Эдуардович</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1d212a;
+    --border: #2a2f3a;
+    --text: #e6e9ef;
+    --muted: #8b93a7;
+    --accent: #6ea8fe;
+    --accent-soft: #2a3a5c;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    padding: 40px 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  header.page {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+
+  header.page .label {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  header.page h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  header.page .sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  section.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 26px;
+    margin-bottom: 20px;
+  }
+
+  section.card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  section.card h2 .num {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  section.card .tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-bottom: 16px;
+  }
+
+  ul.fields {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  ul.fields li {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+    font-size: 14.5px;
+  }
+
+  ul.fields li:first-child { border-top: none; }
+
+  ul.fields li .k {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  ul.fields li .v {
+    color: var(--text);
+    word-break: break-word;
+  }
+
+  /* закрытый блок */
+  .redact {
+    display: inline-block;
+    background: #000;
+    color: #000;
+    border-radius: 4px;
+    padding: 0 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    box-shadow: 0 0 0 1px #000;
+    font-style: normal;
+  }
+  .redact::selection,
+  .redact::-moz-selection {
+    background: #000;
+    color: #000;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+  }
+
+  .family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .family-grid .rel {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .family-grid .rel .role {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .family-grid .rel .who {
+    font-size: 14.5px;
+    color: var(--text);
+  }
+
+  .family-grid .rel .who.redact {
+    display: inline-block;
+    color: #000;
+  }
+
+  footer.page {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12.5px;
+    text-align: center;
+  }
+
+  @media (max-width: 560px) {
+    body { padding: 24px 14px 60px; }
+    section.card { padding: 18px 16px; }
+    header.page h1 { font-size: 22px; }
+    ul.fields li {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    ul.fields li .k { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page">
+    <div class="label">Профиль</div>
+    <h1>Попов Тимофей Эдуардович</h1>
+    <div class="sub">06.04.2014 · RU</div>
+  </header>
+
+  <section class="card">
+    <h2><span class="num">01</span> Основное</h2>
+    <span class="tag">Персона</span>
+    <ul class="fields">
+      <li><span class="k">ФИО</span><span class="v">Попов Тимофей Эдуардович</span></li>
+      <li><span class="k">Вариант написания</span><span class="v">попов тимофей едуардович <em style="color:var(--muted)">(опечатка в источнике)</em></span></li>
+      <li><span class="k">Дата рождения</span><span class="v">06.04.2014</span></li>
+      <li><span class="k">Свидетельство о рождении</span><span class="v">зачем</span></li>
+      <li><span class="k">Гражданство</span><span class="v">RU</span></li>
+      <li><span class="k">Адрес</span><span class="v">проживает по адресу матери — 614051, <span class="redact">no</span></span></li>
+      <li><span class="k">Источник</span><span class="v">перелёты сирена фл 2000-09.2023 (записи №38, №46)</span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">02</span> Мать</h2>
+    <ul class="fields">
+      <li><span class="k">ФИО</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Телефон</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Почта</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">СНИЛС</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Паспорт</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Адрес</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Источник</span><span class="v">amaks, перелёты, жители ФЛ 2024, госуслуги</span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">03</span> Отец</h2>
+    <ul class="fields">
+      <li><span class="k">ФИО</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Вариант написания</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Дата рождения</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Паспорт</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Телефон</span><span class="v"><span class="redact">Это не про меня</span> <em style="color:var(--muted)">(общий с женой)</em></span></li>
+      <li><span class="k">Почта</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Гражданство</span><span class="v">RU</span></li>
+      <li><span class="k">Адрес</span><span class="v">фигурирует в связке с адресом <span class="redact">Это не про меня</span> (проживание совместно с Поповой А.В.)</span></li>
+      <li><span class="k">Источник</span><span class="v">amaks, перелёты сирена фл 2000-09.2023 (записи №37, №45)</span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">04</span> Второй ребёнок</h2>
+    <ul class="fields">
+      <li><span class="k">ФИО</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Вариант написания</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Дата рождения</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Свидетельство о рождении</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Гражданство</span><span class="v">RU</span></li>
+      <li><span class="k">Адрес</span><span class="v">проживает по адресу матери — 614051, <span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Источник</span><span class="v">перелёты сирена фл 2000-09.2023 (записи №41, №43)</span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">05</span> Семейная связка</h2>
+    <span class="tag">Подтверждено</span>
+    <div class="family-grid">
+      <div class="rel"><div class="role">Отец</div><div class="who redact">Это не про меня</div></div>
+      <div class="rel"><div class="role">Мать</div><div class="who redact">Это не про меня</div></div>
+      <div class="rel"><div class="role">Сын</div><div class="who">Попов Тимофей Эдуардович, 06.04.2014</div></div>
+      <div class="rel"><div class="role">Дочь</div><div class="who redact">Это не про меня</div></div>
+    </div>
+
+    <hr>
+
+    <ul class="fields">
+      <li><span class="k">Общий адрес</span><span class="v">614051, <span class="redact">Зачем</span></span></li>
+      <li><span class="k">Общий телефон</span><span class="v"><span class="redact">Это не про меня</span></span></li>
+      <li><span class="k">Подтверждение</span><span class="v">совместный перелёт Казань — Пермь 01.04.2023 (все четверо), совместное проживание в отеле amaks 01–04.10.2024 (<span class="redact">Это не про меня</span>)</span></li>
+    </ul>
+  </section>
+
+  <footer class="page">
+    Документ сформирован локально · отображение без передачи данных
+  </footer>
+
+</div>
+</body>
+</html>
